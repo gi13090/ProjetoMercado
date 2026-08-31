@@ -50,4 +50,4 @@ public class Fornecedores {
                 '}';
     }
 }
-//encerramos por hoje, amanha continuo com outras classes e irei colocar joincoluns
+//encerramos por hoje, amanha continuo com outras classes e irei colocar joincolunss
