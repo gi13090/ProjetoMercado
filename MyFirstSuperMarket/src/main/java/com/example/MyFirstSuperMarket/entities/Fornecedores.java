@@ -1,7 +1,6 @@
 package com.example.MyFirstSuperMarket.entities;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NegativeOrZero;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.PositiveOrZero;
@@ -40,9 +39,12 @@ public class Fornecedores {
     @NotBlank(message="É necessario o endereço do fornececedor")
     private @Getter @Setter String localização;
 
+
+    @OneToMany(mappedBy = "Products", cascade =CascadeType.ALL, fetch =FetchType.EAGER )
+
     @Override
     public String toString() {
-        return "Fornecedoress{" +
+        return "Fornecedores{" +
                 "nome='" + nome + '\'' +
                 ", cnpj=" + cnpj +
                 ", prazoEntrega=" + prazoEntrega +
